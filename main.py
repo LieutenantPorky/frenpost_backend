@@ -36,7 +36,7 @@ messages = {}
 
 @app.route("/post", methods=["post"])
 def post():
-    data = request.get_data(False, False, False)
+    data = request.get_data(True, False, False)
     key = save_data(data)
     print(queue)
     return str(key)
