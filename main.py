@@ -63,6 +63,6 @@ def get_post(key):
 @app.route("/post_id")
 def get_id():
     output = ""
-    for i in queue:
-        output += i + "\n"
+    for i in range(len(queue)-1,-1,-1):
+        output += queue[i] + "\n"
     return output
